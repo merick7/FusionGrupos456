@@ -1,0 +1,9 @@
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\bin\Debug\netstandard2.1\WebGanadera.App.Dominio.deps.json
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\bin\Debug\netstandard2.1\WebGanadera.App.Dominio.dll
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\bin\Debug\netstandard2.1\WebGanadera.App.Dominio.pdb
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\obj\Debug\netstandard2.1\WebGanadera.App.Dominio.csprojAssemblyReference.cache
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\obj\Debug\netstandard2.1\WebGanadera.App.Dominio.AssemblyInfoInputs.cache
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\obj\Debug\netstandard2.1\WebGanadera.App.Dominio.AssemblyInfo.cs
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\obj\Debug\netstandard2.1\WebGanadera.App.Dominio.csproj.CoreCompileInputs.cache
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\obj\Debug\netstandard2.1\WebGanadera.App.Dominio.dll
+C:\DSC3\WebGanadera.App\WebGanadera.App.Dominio\obj\Debug\netstandard2.1\WebGanadera.App.Dominio.pdb

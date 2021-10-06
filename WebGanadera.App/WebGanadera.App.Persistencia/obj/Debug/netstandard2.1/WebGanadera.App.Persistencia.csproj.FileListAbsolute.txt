@@ -1,0 +1,12 @@
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\bin\Debug\netstandard2.1\WebGanadera.App.Persistencia.deps.json
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\bin\Debug\netstandard2.1\WebGanadera.App.Persistencia.dll
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\bin\Debug\netstandard2.1\WebGanadera.App.Persistencia.pdb
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.csprojAssemblyReference.cache
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.AssemblyInfoInputs.cache
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.AssemblyInfo.cs
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.dll
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.pdb
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\bin\Debug\netstandard2.1\WebGanadera.App.Dominio.dll
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\bin\Debug\netstandard2.1\WebGanadera.App.Dominio.pdb
+C:\DSC3\WebGanadera.App\WebGanadera.App.Persistencia\obj\Debug\netstandard2.1\WebGanadera.App.Persistencia.csproj.CopyComplete
