@@ -121,6 +121,7 @@ namespace WebGanadera.App.Consola{
             //AgregarHistoriaAEjemplar(560,3);
             
             //AgregarVacunasaVeterinario(3,"8720163");
+            AgregarVacunaAGanado();
             //AgregarVacunasaGanado(3);
             
         }
@@ -426,6 +427,13 @@ namespace WebGanadera.App.Consola{
             //GanadoControlEncontrado.Vacunas = vacunas;
         }
 
+        public static void AgregarVacunaAGanado(int vacunaid, int NumEjemplar){
+            var GanadoControlEncontrado = _repoGanadoControl.ObtenerGanadoControl(NumEjemplar);
+            var VacunaEncontrado = _repoVacuna.ObtenerVacuna(vacunaid);
+            GanadoControlEncontrado.Vacunas = VacunaEncontrado;
+            _repoGanadoControl.ActualizarGanadoControl(GanadoControlEncontrado);
+        }
+        
         public static void AgregarVacunasaVeterinario(int vacunaid, string NumLicencia){
             var VacunaEncontrada = _repoVacuna.ObtenerVacuna(vacunaid);
             var VeterinarioEncontrado = _repoVeterinario.ObtenerVeterinario(NumLicencia);
