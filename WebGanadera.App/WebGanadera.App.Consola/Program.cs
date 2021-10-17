@@ -18,7 +18,7 @@ namespace WebGanadera.App.Consola
                 varstr.Append(valbyte.ToString("x2").ToLower());
             }
             string passC = varstr.ToString();
-            return passC;
+            return passC; //retorna variable passC
         }
 
         static void Main(string[] args)
