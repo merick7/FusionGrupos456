@@ -47,7 +47,8 @@ namespace WebGanadera.App.Consola{
 
         static void Main(string[] args){
             Console.WriteLine("Probando resultado de funciones");
-            string text_in;
+            //Validando la contraseña de entrada
+            /*string text_in;
             Console.WriteLine("Introduzca una contraseña");
             text_in=Console.ReadLine();
             bool val=valpass(text_in);
@@ -57,7 +58,7 @@ namespace WebGanadera.App.Consola{
                 val=valpass(text_in);
             }
             Console.WriteLine("La contraseña ha cumplido con los estandares. Fue digitado: "+text_in);
-            
+            */
 
             /*string prueba = "Javier";
             string texto = cifrarPass(prueba);
