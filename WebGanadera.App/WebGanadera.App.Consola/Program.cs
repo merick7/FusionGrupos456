@@ -36,7 +36,7 @@ namespace WebGanadera.App.Consola
             var ganadero = new Ganadero{
                 //Id=123,
                 TipoId="Cedula",
-                Nombres="Carlos Javier",
+                Nombres="Andrea",
                 Apellidos="Rengifo Mendez",
                 NumeroTel = "3155667478",
                 Direccion = "Casa campo 1234",
