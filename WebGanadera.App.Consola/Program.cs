@@ -28,19 +28,21 @@ namespace WebGanadera.App.Consola{
         }
 
         //Validacion de tamaño cadena, numero y mayuscula
-        public static string valpass(string prueba){
+        public static Boolean valpass(string prueba){
             if (prueba.Length >= 8){  //La cadena tiene el tamaño mínimo
-                bool validText = prueba.Any(c => char.IsUpper(c)); //Mayuscula
-                bool validNum = prueba.Any(c => char.IsDigit(c)); //Es numero
-                if (validNum == true && validText == true){
-                    Console.WriteLine("La cadena es correcta");
-                }else{
-                    Console.WriteLine("La cadena debe contener al menos una letra mayuscula y un numero");
-                }
+            bool validText = prueba.Any(c => char.IsUpper(c)); //Mayuscula
+            bool validNum = prueba.Any(c => char.IsDigit(c)); //Es numero
+            if (validNum == true && validText == true){
+                Console.WriteLine("La cadena es correcta");
+                return true;
+            }else{
+                Console.WriteLine("La cadena debe contener al menos una letra mayuscula y un numero");
+                return false;
+            }
             }else{
                 Console.WriteLine("El mínimo de caracteres para la contraseña es de 8");
+                return false;
             }
-            return prueba;
         }
 
         static void Main(string[] args){
@@ -48,7 +50,14 @@ namespace WebGanadera.App.Consola{
             string text_in;
             Console.WriteLine("Introduzca una contraseña");
             text_in=Console.ReadLine();
-            Console.WriteLine("El texto digitado fue: "+text_in);
+            bool val=valpass(text_in);
+            while(val==false){
+                Console.WriteLine("Introduzca una contraseña correcta");
+                text_in=Console.ReadLine();
+                val=valpass(text_in);
+            }
+            Console.WriteLine("La contraseña ha cumplido con los estandares. Fue digitado: "+text_in);
+            
 
             /*string prueba = "Javier";
             string texto = cifrarPass(prueba);
