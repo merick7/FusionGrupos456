@@ -45,6 +45,11 @@ namespace WebGanadera.App.Consola{
 
         static void Main(string[] args){
             Console.WriteLine("Probando resultado de funciones");
+            string text_in;
+            Console.WriteLine("Introduzca una contraseña");
+            text_in=Console.ReadLine();
+            Console.WriteLine("El texto digitado fue: "+text_in);
+
             /*string prueba = "Javier";
             string texto = cifrarPass(prueba);
             Console.WriteLine(texto);*/
@@ -93,7 +98,7 @@ namespace WebGanadera.App.Consola{
             //BorrarHistoriaClinica();
 
             //***************Operaciones varias********************
-            AgregarVeterinarioAGanado("8720163",3);
+            //AgregarVeterinarioAGanado("8720163",3);
             //ObtenerVeterinariodeGanado(2);
 
             //AgregarGanadoControlDesdeGanado(892);
