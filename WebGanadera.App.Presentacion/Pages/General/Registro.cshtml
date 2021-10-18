@@ -222,7 +222,7 @@
     ​
     <section class="u-section-1">
         <div class="u-sheet-1">
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" method="post" novalidate>
                 <h2 class="u-text-1">REGISTRO</h2>
                 <div class="form-select">
                     <select class="custom-select" id="select-usuario" required>
@@ -235,19 +235,19 @@
                 <div class="form-row">
                     <div class="input-group mb-3">
                         <label for="validationTooltip01"></label>
-                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" required>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" name="Nombres" required>
                     </div>
                     <div class="input-group mb-3">
                         <label for="validationTooltip02"></label>
-                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido"
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" name="Apellidos"
                             required>
                     </div>
                     <div class="input-group mb-3">
                         <label for="validationTooltip03"></label>
-                        <input type="text" class="form-control" id="validationTooltip03" placeholder="E-mail" required>
+                        <input type="text" class="form-control" id="validationTooltip03" placeholder="E-mail" name="Correo" required>
                     </div>
                     <div class="form-select">
-                        <select class="custom-select" id="select-usuario" required>
+                        <select class="custom-select" id="select-usuario" name="TipoDocumento" required>
                             <option value="nulo">Tipo de documento</option>
                             <option value="Ganadero">Cédula de Ciudadanía</option>
                             <option value="Veterinario">Cédula de Extranjería</option>
@@ -257,7 +257,7 @@
                     <div class="input-group mb-3">
                         <label for="validationTooltip04"></label>
                         <input type="text" class="form-control" id="validationTooltip04"
-                            placeholder="Número de documento" required>
+                            placeholder="Número de documento" name="NumDoc" required>
                     </div>
                     <div class="form-select">
                         <label for="select-departamento-registro">Localización</label>
@@ -279,14 +279,14 @@
                 <div class="input-group mb-3">
                     <label for="validationTooltip05"></label>
                     <input type="text" class="form-control" id="validationTooltip05" placeholder="Tarjeta profesional"
-                        required>
+                        name="NumLicencia" required>
                 </div>
                 <div class="input-group mb-3">
                     <label for="validationTooltip06"></label>
-                    <input type="text" class="form-control" id="validationTooltip06" placeholder="Veterinario" required>
+                    <input type="text" class="form-control" id="validationTooltip06" placeholder="Especialidad" name="Especialidad" required>
                 </div>
 
-                <button class="btn-dark" type="submit">Registrar</button>
+                <button class="btn-dark" type="submit" asp-page-handler="Agregar">Registrar</button>
             </form>
         </div>
 
@@ -365,8 +365,6 @@ function registro (){
     })
 
 }
-registro()
-
 
     </script>    
 </body>
