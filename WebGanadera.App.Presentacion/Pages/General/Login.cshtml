@@ -1,0 +1,247 @@
+﻿@page
+@model WebGanadera.App.Presentacion.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Login.css" media="screen">
+
+    <style>
+
+        body {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-image: url("https://i.ibb.co/rkK26wm/Whats-App-Image-2021-10-18-at-00-57-40-1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .u-section-1 .u-text-1 {
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            font-size: 30px;
+            margin: 0 auto 30px;
+            padding: 20px 0 10px;
+            text-align: center;
+        }
+
+        .u-section-1 .u-text-2 {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 30xp 0 30xp;
+            padding: 50px 20px 10px;
+            text-align: center;
+        }
+
+        .u-section-1 .u-text-3 {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin: 10xp 0 10xp;
+            padding: 10px 20px 10px;
+            text-align: center;
+        }
+
+        .u-section-1 .form-control {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 10xp 50xp 10xp;
+            padding: 10px 20px 10px;
+            margin-top: 5px;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            padding-top: 10px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .u-section-1 .form-check-input {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            border-radius: 10px;
+            margin: 10xp 50xp 10xp;
+            padding: 10px 20px 10px;
+            margin-top: 5px;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            padding-top: 10px;
+            margin-left: 20%;
+        }
+
+        .u-section-1 .needs-validation {
+            background-color: white;
+            width: 30%;
+            height: 60vh;
+            margin: auto auto;
+            margin-bottom: 2%;
+            border-radius: 20px;
+        }
+
+        .u-section-1 .btn-dark {
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            color: white;
+            background-image: none;
+            background-color: black;
+            border-radius: 30px;
+            border-style: aquamarine;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 25px 8px;
+            position: relative;
+            margin-top: 5%;
+            margin-bottom: 2%;
+            text-align: center;
+        }
+
+        .u-section-1 form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .u-section-1 form a {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(29, 165, 51);
+        }
+
+        .mapa {
+            margin: 1px 1px 1px;
+            margin-top: 5px;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            padding-top: 10px;
+            margin-left: 27%;
+            margin-top: 1%;
+            margin-bottom: 2%;
+            text-align: center;
+        }
+
+
+        #footer-wrapper {
+            color: white;
+            /* Color del título */
+            margin: 5px 10px;
+            padding: 1px 0;
+            text-align: center;
+            font-size: 12px;
+            /* Tamaño de la fuente del título */
+        }
+
+        .u-footer {
+            background: #3c3c3c;
+            /* Color de fondo de los gadgets */
+            padding: 5px 5px;
+        }
+
+        #col1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #col2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #col3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #col4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            margin: 0;
+            padding: 20xp;
+            text-align: center;
+        }
+
+        #col5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            margin: 0;
+            padding: 20xp;
+            text-align: center;
+        }
+
+        .u-footer .u-text-6 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            margin: 1px auto 0;
+            text-align: center;
+        }
+
+        .u-footer .u-text-7 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            margin: 1px auto 16px;
+            text-align: center;
+        }
+    </style>
+
+<body>
+    ​
+    <section class="u-section-1">
+        <div class="u-sheet-1">
+            <form class="needs-validation" novalidate>
+                <h2 class="u-text-1">INICIAR SESION</h2>
+                <div class="form-row">
+                    <div class="input-group mb-3">
+                        <label for="validationTooltip01"></label>
+                        <input type="text" class="form-control" id="validationTooltip01"
+                            placeholder="Ingresar usuario o email" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="validationTooltip02"></label>
+                        <input type="password" class="form-control" id="validationTooltip02" placeholder="Contraseña"
+                            required>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Recordarme</label>
+                </div>
+                <button  class="btn-dark" type="submit">Iniciar Sesión</button>
+                <a href="" class="badge badge-light">¿Olvidó su contraseña?</a>
+                <a  href="/General/Registro" class="btn-dark"  type="button">Registrar</a>
+            </form>
+        </div>
+
+
+        </div>
+    </section>
+
+
+</body>
+</head>
+
+</html>
