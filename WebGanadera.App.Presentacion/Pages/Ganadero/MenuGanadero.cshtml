@@ -5,180 +5,669 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <title>Bienvenido</title>
     <link id="u-theme-google-font" rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link rel="stylesheet" href="logeado.css">
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="css/LoginGanadero.css">
 
     <style>
         /* Container superior */
-        .ctn-superior {
-            background-color: whitesmoke;
-            width: 80%;
-            height: 50vh;
-            margin-top: 2%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            border-radius: 5px;
-        }
+.ctn-superior{
+    background-color:whitesmoke;
+    width: 80%;
+    height: 50vh;
+    margin-top: 2%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 5px;
+}
+.ctn-superior hr{
+    background-color: #b4b3ac;
+    height:40vh;
+    width: 0.2px;
+    border-radius: 80px;
+}
+.ctn-superior img{
+    width: 50%;
+    height:40vh;
+    border-radius: 2px;
+}
+.btn-activarModal{
+    background-color:#33363a;
+    color: #e8e8e8d7;
+    width: 80%;
+    margin:5% 10%;
+    border-radius: 80px;
+}
+.btn-activarModal:hover{
+    background-color:#e8e8e8d7;
+    color: #33363a;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px #33363a;
+}
+.ctn-superior .ctn-modals{
+    width: 30%;
+    height:40vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content{
+    background-color:#e8e8e8;
+    border-radius: 18px;
+}
+.modal-content .modal-header{
+    justify-content: center;
+}
 
-        .ctn-superior hr {
-            background-color: #b4b3ac;
-            height: 40vh;
-            width: 0.2px;
-            border-radius: 80px;
-        }
+.modal .modal-footer button{
+    background-color:#e8e8e8d7;
+    color: black;
+}
+form .form-group{
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-group label {
+    width: 20%;
+}
+.form-group select {
+    width: 60%;
+}
+.form-group textarea {
+    width: 60%;
+}
+.form-group input{
+    width: 60%;
+}
 
-        .ctn-superior img {
-            width: 50%;
-            height: 40vh;
-            border-radius: 2px;
-        }
+.form-group textarea{
+    resize: none;
+}
 
-        .btn-activarModal {
-            background-color: #33363a;
-            color: #e8e8e8d7;
-            width: 80%;
-            margin: 5% 10%;
-            border-radius: 80px;
-        }
+form .btn-dark{
+    background-color:#e8e8e8d7;
+    color: black;
+    margin-left: 40%;
+}
 
-        .btn-activarModal:hover {
-            background-color: #e8e8e8d7;
-            color: #33363a;
-            transform: scale(1.1);
-            box-shadow: 0px 5px 15px #33363a;
-        }
+/* Container inferior */
 
-        .ctn-superior .ctn-modals {
-            width: 30%;
-            height: 40vh;
-            display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: center;
-        }
+.ctn-inferior{
+    background-color:whitesmoke;
+    width: 80%;
+    height: 40vh;
+    margin-top:2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom:2% ;
+}
 
-        .modal-content {
-            background-color: #e8e8e8;
-            border-radius: 18px;
-        }
+.ctn-inferior .ctn-agendamiento{
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-        .modal-content .modal-header {
-            justify-content: center;
-        }
+}
+.ctn-inferior hr{
+    background-color: #b4b3ac;
+    height:30vh;
+    width: 0.3px;
+    border-radius: 80px;
+}
 
-        .modal .modal-footer button {
-            background-color: #e8e8e8d7;
-            color: black;
-        }
+.ctn-inferior .ctn-TablaSolictud{
+    width: 60%;
+    height: 30vh;
+    align-items: center;
+    overflow-y:scroll;
+}
+.ctn-inferior .ctn-TablaSolictud::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;  
+}
+.ctn-inferior .ctn-TablaSolictud::-webkit-scrollbar-thumb {
+    background:#33363a;
+    border-radius: 4px;
+}
+.ctn-TablaSolictud .table tbody ,
+    .ctn-TablaSolictud .table thead th{
+    text-align: center;
+}
 
-        form .form-group {
-            display: flex;
-            justify-content: space-evenly;
-        }
+.ctn-TablaSolictud .table tbody .estado-icono{
+    width: 20%;
+    align-self: center;
+}
 
-        .form-group label {
-            width: 20%;
-        }
+.ctn-TablaSolictud .table .btn-Solicitud{
+    background-color: #e8e8e8;
+    border-radius: 80px;
+    border:none;
+}
+.ctn-TablaSolictud .table .btn-Solicitud:hover{
+    background-color: #e8e8e8;
+    color: #33363a;
+    transform: scale(1.1);
+}
 
-        .form-group input {
-            width: 60%;
-        }
 
-        .form-group textarea {
-            resize: none;
-        }
+#footer-wrapper{
+    color:white; /* Color del título */
+    margin: 5px 10px;
+    padding: 1px 0;
+    text-align: center;
+    font-size: 12px; /* Tamaño de la fuente del título */
+    }
+    .u-footer{
+      background: #3c3c3c; /* Color de fondo de los gadgets */
+      padding: 5px 5px;
+    }
+  
+    #col1{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #col2{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #col3{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    #col4{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20xp;
+      text-align: center;
+    }
+    #col5{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20xp;
+      text-align: center;
+    }
+  
+    .u-footer .u-text-6 {
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 1px auto 0;
+      text-align: center;
+    }
+    
+    .u-footer .u-text-7 {
+      font-style: "font-family:optima";
+      font-size: 10px;
+      margin: 1px auto 16px;
+      text-align: center;
+    }
 
-        form .btn-dark {
-            background-color: #e8e8e8d7;
-            color: black;
-            margin-left: 40%;
-        }
 
-        /* Container inferior */
-
-        .ctn-inferior {
-            background-color: whitesmoke;
-            width: 80%;
-            height: 40vh;
-            margin-top: 2%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-            border-radius: 5px;
-            margin-bottom: 2%;
-        }
-
-        .ctn-inferior .ctn-agendamiento {
-            width: 35%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-        }
-
-        .ctn-inferior hr {
-            background-color: #b4b3ac;
-            height: 30vh;
-            width: 0.3px;
-            border-radius: 80px;
-        }
-
-        .ctn-inferior .ctn-TablaSolictud {
-            width: 60%;
-            height: 30vh;
-            align-items: center;
-            overflow-y: scroll;
-        }
-
-        .ctn-TablaSolictud .table tbody,
-        .ctn-TablaSolictud .table thead th {
-            text-align: center;
-        }
-
-        .ctn-TablaSolictud .table tbody .estado-icono {
-            width: 25%;
-            align-self: center;
-        }
-
-        .ctn-TablaSolictud .table .btn-eliminarSolicitud {
-            background-color: #e8e8e8;
-            border-radius: 80px;
-            border: none;
-        }
-
-        .ctn-TablaSolictud .table .btn-eliminarSolicitud:hover {
-            background-color: #e8e8e8;
-            color: #33363a;
-            transform: scale(1.1);
-        }
     </style>
+</head>
+<body>
+   
+    <h1 class="text-center my-3">Bienvenido Ganadero..nombre</h1>
 
-    <script>
+    <!-- Seccion Logeado -->
+<div class="container-fluid ctn-superior">
+    <div class="container ctn-modals">
+            <!-- Modal Registrar -->
+            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#registrarGanado">
+                Registrar Ganado
+            </button>
+            <div class="modal fade" id="registrarGanado" tabindex="-1" role="dialog" aria-labelledby="registrarGanado" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="registrarGanadoTitle">Registrar Ganado</h5>
+                    </div>
+                    <div class="modal-body">
+                        <!-- formulario -->
+                        <form>
+                            <div class="form-group">
+                                <label for="raza">Raza</label>
+                                <input type="text" class="form-control" id="raza" placeholder="Raza" required>
+                                </div>
+                            <div class="form-group">
+                                <label for="edad">Edad</label>
+                                <input type="number" class="form-control" id="edad" placeholder="Edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="genero">Género</label>
+                                <input type="text" class="form-control" id="edad" placeholder="Edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="peso">Peso</label>
+                                <input type="text" class="form-control" id="peso" placeholder="Peso" required>
+                            </div>                    
+                            <div class="form-group">
+                                <label for="lote">Lote</label>
+                                <input type="text" class="form-control" id="lote" placeholder="0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inventario">Numero de Ejemplar</label>
+                                <input type="text" class="form-control" id="inventario" placeholder="0000" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Registrar</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Modal Registrar -->    
+
+            <!-- Modal Modificar -->
+            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#modificarGanado">
+                Modificar Ganado
+            </button>
+            <div class="modal fade" id="modificarGanado" tabindex="-1" role="dialog" aria-labelledby="modificarGanado" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="modificarGanadoTitle">Modificar Ganado</h5>
+                    </div>
+                    <div class="modal-body">
+                        <!-- formulario -->
+                        <form>
+                            <div class="form-group">
+                                <label  for="select-ganado-modificar">Seleccionar Ganado</label>
+                                <select class="custom-select" id="select-ganado-modificar" required>
+                                  <option value="nulo">Seleccione ganado a modificar</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="raza">Raza</label>
+                                <input type="text" class="form-control" id="raza" placeholder="Raza" required>
+                                </div>
+                            <div class="form-group">
+                                <label for="edad">Edad</label>
+                                <input type="number" class="form-control" id="edad" placeholder="Edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="genero">Género</label>
+                                <input type="text" class="form-control" id="edad" placeholder="Edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="peso">Peso</label>
+                                <input type="number" class="form-control" id="peso" placeholder="Peso" required>
+                            </div>                    
+                            <div class="form-group">
+                                <label for="lote">Lote</label>
+                                <input type="text" class="form-control" id="lote" placeholder="0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inventario">Numero de Ejemplar</label>
+                                <input type="text" class="form-control" id="inventario" placeholder="0000" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Modificar</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Modal Modificar-->    
+            <!-- Modal Eliminar -->
+            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#eliminarGanado">
+                Eliminar Ganado
+            </button>
+            <div class="modal fade" id="eliminarGanado" tabindex="-1" role="dialog" aria-labelledby="eliminarGanado" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="eliminarGanadoTitle">Eliminar Ganado</h5>
+                    </div>
+                    <div class="modal-body">
+                        <!-- formulario -->
+                        <form>
+                            <div class="form-group">
+                                <label  for="select-ganado-eliminar">Seleccionar Ganado</label>
+                                <select class="custom-select" id="select-ganado-eliminar" required>
+                                  <option value="nulo">Seleccione ganado a eliminar</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Eliminar</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Modal ELiminar -->    
+    </div>
+    <hr>
+    <img src="https://i.ibb.co/swQXcQD/Whats-App-Image-2021-10-18-at-00-57-41-3.jpg" alt="logo">
+</div>
+
+<div class="container-fluid ctn-inferior">
+
+    <!-- Select Tipo Cita -->
+    <div class="container ctn-agendamiento">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="selectTipoCita">Tipo de cita</label>
+            </div>
+            <select class="custom-select" id="selectTipoCita">
+              <option value="ninguna" selected >Seleccione tipo de cita</option>
+              <option value="vacuna">Vacunación</option>
+              <option value="consulta">Consulta medica</option>
+            </select>
+          </div>
+          <!-- Boton Modal Tipo Cita -->
+          <button type="button" class="btn btn-activarModal" id="btn-tipoConsulta" data-toggle="modal" data-target="">
+            Agendar Cita
+        </button>
+        <!-- Modal Vacunacion -->
+        <div class="modal fade" id="vacuna" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="vacunaTitle">Vacunación</h5>
+                </div>
+                <div class="modal-body">
+                    <!-- formulario  Vacunacion-->
+                    <form>
+                        <div class="form-group">
+                            <label  for="select-ganado-vacunacion">Seleccionar Ganado</label>
+                            <select class="custom-select" id="select-ganado-vacunacion" required>
+                              <option value="nulo">Seleccione ganado a vacunar</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label  for="select-departamento-vacuna">Departamento</label>
+                            <select class="custom-select" id="select-departamento-vacuna" required>
+                              <option value="nulo">Seleccione departamento</option>
+                              <option value="Antioquia">Antioquia</option>
+                              <option value="Caldas">Caldas</option>
+                              <option value="Cundinamarca">Cundinamarca</option>
+                              <option value="Tolima">Tolima</option>
+                              <option value="Valle">Valle del Cauca</option>
+                            </select>
+                          </div>
+                          <div class="form-group mb-3">
+                            <label  for="select-municipio">Municipio</label>
+                            <select class="custom-select" id="select-municipio-vacuna" required>
+                            </select>
+                          </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Solicitar</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- MOdal Consulta -->
+        <div class="modal fade" id="consulta" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="consultaMedicaTitle">Consulta medica</h5>
+                </div>
+                <div class="modal-body">
+                    <!-- formulario  Consulta-->
+                    <form>
+                        <div class="form-group">
+                            <label  for="select-ganado-atencion">Seleccionar Ganado</label>
+                            <select class="custom-select" id="select-ganado-atencion" required>
+                              <option value="nulo">Seleccione ganado a atender</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label  for="select-departamento">Departamento</label>
+                            <select class="custom-select" id="select-departamento-citaM" required>
+                                <option value="nulo">Seleccione departamento</option>
+                                <option value="Antioquia">Antioquia</option>
+                                <option value="Caldas">Caldas</option>
+                                <option value="Cundinamarca">Cundinamarca</option>
+                                <option value="Tolima">Tolima</option>
+                                <option value="Valle">Valle del Cauca</option>
+                            </select>
+                          </div>
+                          <div class="form-group mb-3">
+                            <label  for="select-municipio">Municipio</label>
+                            <select class="custom-select" id="select-municipio-citaM" required>
+                            </select>
+                          </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Solicitar</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+          <!-- Boton Modal Tipo Cita -->
+    </div>
+
+    <hr>
+
+    <!-- Tabla de Estado -->
+    <div class="container ctn-TablaSolictud">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Tipo Solicitud</th>
+                <th scope="col">Ejemplar</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vacunacion</th>
+                <td>786VILL</td>
+                <td><img src="https://i.ibb.co/LrY8RyK/Whats-App-Image-2021-10-18-at-9-04-38-AM.jpg" class="estado-icono" alt="pendiente"></td>        
+                <td><button type="button" class="btn-Solicitud" data-toggle="modal" data-target="#SolicitudPendiente">
+                    Detalles
+                  </button></td>
+              </tr>
+              <tr>
+                <td>Atención Médica</th>
+                <td>260VILL</td>
+                <td><img src="https://i.ibb.co/m6m1912/Whats-App-Image-2021-10-18-at-9-04-38-AM-2.jpg" class="estado-icono" alt="proceso"></td>        
+                <td><button type="button" class="btn-Solicitud" data-toggle="modal" data-target="#SolicitudProceso">
+                    Detalles
+                  </button></td>
+              </tr>
+              <tr>
+                <td>Atención Médica</th>
+                <td>260VILL</td>
+                <td><img src="https://i.ibb.co/my34fvj/Whats-App-Image-2021-10-18-at-9-04-38-AM-1.jpg" class="estado-icono" alt="finalizado"></td>        
+                <td><button type="button" class="btn-Solicitud" data-toggle="modal" data-target="#SolicitudFinalizado">
+                    Detalles
+                  </button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+ <!-- Modal Pendiente-->
+ <div class="modal fade" id="SolicitudPendiente" tabindex="-1" role="dialog" aria-labelledby="SolicitudPendiente" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SolicitudPendiente">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Cita asignada: *conectar con cita asignada
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Pendiente-->
+
+  <!-- Modal Proceso-->
+ <div class="modal fade" id="SolicitudProceso" tabindex="-1" role="dialog" aria-labelledby="SolicitudProceso" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SolicitudProceso">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Mostrar información de cita asignada: *conectar con cita asignada
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Proceso-->
+
+<!-- Modal Finalizado-->
+<div class="modal fade" id="SolicitudFinalizado" tabindex="-1" role="dialog" aria-labelledby="SolicitudFinalizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SolicitudFinalizado">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Llamar toda la información de consulta-<br>
+            Mostrar historia clínica<br>
+            Proceso concluido
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Finalizado-->
+
+<footer class="u-footer">
+    <div id='footer-wrapper'>
+    <div id='footer-columna-contenedor'>
+
+        <div id='footer2' style='width: 20%; float: left; margin:0; text-align: center;'><b>GACONSAPP</b>
+        <b:section class='footer-column' id='col1' preferred='yes' style='float:center;'><br>Cali, Bogotá, Ibagué, Manizales, Medellín<br>Colombia
+        </div>
         
+        <div id='footer3' style='width: 20%; float: left; margin:0; text-align: center;'><b>SERVICIOS</b>
+        <b:section class='footer-column' id='col2' preferred='yes' style='float:center;'/><br>Brindamos atención médica a su ganado de tal forma que el usuario pueda tener un control de sus citas e historial médico de cada uno de sus ejemplares.
+        </div>
+        
+        <div id='footer4' style='width: 20%; float: left; margin:0; text-align: center;'><b>A QUIÉN VA DIRIGIDA</b>
+        <b:section class='footer-column' id='col3' preferred='yes' style='float:center;'/></br>La app va dirigida a dos tipos de usuarios:
+        </div>
+
+        <div id='footer5' style='width: 20%; float: left; margin:0; text-align: center;'>
+        <b:section class='footer-column' id='col4' preferred='yes' style='float:center;'/>1. Ganaderos, quienes tendrán la opción de registrar su ganado, seleccionar veterinaria de preferencia, pedir citas de consulta y acceder a resultados e historias clínicas de los mismos.
+        </div>
+
+        <div id='footer5' style='width: 20%; float: right; margin:0; text-align: center;'>
+        <b:section class='footer-column' id='col5' preferred='yes' style='float:center;'/>2. Veterinarios, quien podrán registrarse para poder brindar atención médica, registrando sus vacunas disponibles, asignando citas y generando los respectivos resultados de cada atención prestada.
+        </div>
+        <div style='clear:both;'/>
+        <p>
+        <hr text-align='center' color=#b5b5b5 width='100%'/></p>
+        <div id='footer-bottom' style='text-align: center; margin: 0; padding: 0; text-transform: lowercase;'>
+        
+        
+        </div>
+    </div><a class="u-btn-1">
+    </a><p class="u-text-6"><b>Contáctanos:</b> +1 (234) 567-8910&nbsp;</p>
+    <p class="u-text-7"> <b>© 2021 GACONSAPP. Todos los derechos reservados.</b></p></footer>
+        
+    </div>
+    
+</footer>
+
+    <!-- Seccion Logeado -->
+<script src="js/LoginGanadero.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+    
 const d = document;
 function tipoCita (){
     const $select = d.getElementById("selectTipoCita")
     const $btnModal = d.getElementById("btn-tipoConsulta")
-    const $DepartamentoCitaMedica = d.getElementById("select-ubicacion-citaM")
+    const $DepartamentoCitaMedica = d.getElementById("select-departamento-citaM")
     const $MunicipioCitaMedica = d.getElementById("select-municipio-citaM")
-    const $DepartamentoCitaVacuna = d.getElementById("select-ubicacion-vacuna")
+    const $DepartamentoCitaVacuna = d.getElementById("select-departamento-vacuna")
     const $MunicipioCitaVacuna = d.getElementById("select-municipio-vacuna")
 
-    const Ant = ["Abejorral","Caldas","Alejandría","El Carmen de Viboral","Envigado","Itagüí","Armenia","Barbosa","Bello"]
-    const Bog = ["Antonio Nariño","Barrios Unidos","Bosa","Chapinero","Ciudad Bolívar","Santa Fe"]
-    const Valle = ["Bolivar","Cartago","El Caíro" ,"El Cerrito","Dagua","Buga"]
+    const Antioquia = ["Seleccione municipio","Barbosa", "Bello", "Caldas", "Envigado", "Fredonia", "Itagüi", "La Ceja", "La Estrella", "Medellín", "Sabaneta"]
+    const Caldas = ["Seleccione municipio","Chinchiná", "Manizales", "Neira", "Palestina", "Villamaría"]
+    const Cundinamarca = ["Seleccione municipio","Bogotá", "Chía", "Cota", "Funza", "Mosquera", "La Calera", "Sibaté", "Soacha"]
+    const Tolima = ["Seleccione municipio","Anzoátegui", "Alvarado", "Cajamarca", "Coello", "El Espiral", "Flandes", "Ibagué", "Rovira"]
+    const Valle = ["Seleccione municipio","Cali", "Candelaria", "Dagua", "El Cerrito", "Florida", "Jamundí", "Palmira", "Pradera", "Vijes", "Yumbo"]
 
     
 
@@ -196,25 +685,43 @@ function tipoCita (){
         
         /* Departamentos y Municipios de Modal Cita Medica*/
 
-        if ($DepartamentoCitaMedica.value === "ant" ) {
+        if ($DepartamentoCitaMedica.value === "Antioquia" ) {
             $MunicipioCitaMedica.innerHTML=" "
-            Ant.forEach(el =>{
+            Antioquia.forEach(el =>{
                 let $option = d.createElement("option")
                 $option.value = el
                 $option.innerText = el
                 $MunicipioCitaMedica.appendChild($option)
             })
         }
-        if ($DepartamentoCitaMedica.value === "bog") {
+        if ($DepartamentoCitaMedica.value === "Caldas") {
             $MunicipioCitaMedica.innerHTML=" "
-            Bog.forEach(el =>{
+            Caldas.forEach(el =>{
                 let $option = d.createElement("option")
                 $option.value = el
                 $option.innerText = el
                 $MunicipioCitaMedica.appendChild($option)
             })
         }
-        if ($DepartamentoCitaMedica.value === "valle") {
+        if ($DepartamentoCitaMedica.value === "Cundinamarca") {
+            $MunicipioCitaMedica.innerHTML=" "
+            Cundinamarca.forEach(el =>{
+                let $option = d.createElement("option")
+                $option.value = el
+                $option.innerText = el
+                $MunicipioCitaMedica.appendChild($option)
+            })
+        }
+        if ($DepartamentoCitaMedica.value === "Tolima") {
+            $MunicipioCitaMedica.innerHTML=" "
+            Tolima.forEach(el =>{
+                let $option = d.createElement("option")
+                $option.value = el
+                $option.innerText = el
+                $MunicipioCitaMedica.appendChild($option)
+            })
+        }
+        if ($DepartamentoCitaMedica.value === "Valle") {
             $MunicipioCitaMedica.innerHTML=" "
             Valle.forEach(el =>{
                 let $option = d.createElement("option")
@@ -229,25 +736,43 @@ function tipoCita (){
 
         /* Departamentos y Municipios de Modal Vacunacion */
 
-        if ($DepartamentoCitaVacuna.value === "ant" ) {
+        if ($DepartamentoCitaVacuna.value === "Antioquia" ) {
             $MunicipioCitaVacuna.innerHTML=" "
-            Ant.forEach(el =>{
+            Antioquia.forEach(el =>{
                 let $option = d.createElement("option")
                 $option.value = el
                 $option.innerText = el
                 $MunicipioCitaVacuna.appendChild($option)
             })
         }
-        if ($DepartamentoCitaVacuna.value === "bog") {
+        if ($DepartamentoCitaVacuna.value === "Caldas") {
             $MunicipioCitaVacuna.innerHTML=" "
-            Bog.forEach(el =>{
+            Caldas.forEach(el =>{
                 let $option = d.createElement("option")
                 $option.value = el
                 $option.innerText = el
                 $MunicipioCitaVacuna.appendChild($option)
             })
         }
-        if ($DepartamentoCitaVacuna.value === "valle") {
+        if ($DepartamentoCitaVacuna.value === "Cundinamarca") {
+            $MunicipioCitaVacuna.innerHTML=" "
+            Cundinamarca.forEach(el =>{
+                let $option = d.createElement("option")
+                $option.value = el
+                $option.innerText = el
+                $MunicipioCitaVacuna.appendChild($option)
+            })
+        }
+        if ($DepartamentoCitaVacuna.value === "Tolima") {
+            $MunicipioCitaVacuna.innerHTML=" "
+            Tolima.forEach(el =>{
+                let $option = d.createElement("option")
+                $option.value = el
+                $option.innerText = el
+                $MunicipioCitaVacuna.appendChild($option)
+            })
+        }
+        if ($DepartamentoCitaVacuna.value === "Valle") {
             $MunicipioCitaVacuna.innerHTML=" "
             Valle.forEach(el =>{
                 let $option = d.createElement("option")
@@ -266,304 +791,6 @@ function tipoCita (){
 tipoCita()
 
 
-    </script>
-
-</head>
-
-<body>
-
-    <h1 class="text-center my-3">Bienvenido</h1>
-
-    <!-- Seccion Logeado -->
-    <div class="container-fluid ctn-superior">
-        <div class="container ctn-modals">
-            <!-- Modal Registrar -->
-            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#registrarGanado">
-                Registrar Ganado
-            </button>
-            <div class="modal fade" id="registrarGanado" tabindex="-1" role="dialog" aria-labelledby="registrarGanado"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="registrarGanadoTitle">Registrar Ganado</h5>
-                        </div>
-                        <div class="modal-body">
-                            <!-- formulario -->
-                            <form>
-                                <div class="form-group">
-                                    <label for="raza">Raza</label>
-                                    <input type="text" class="form-control" id="raza" placeholder="Raza" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lote">Lote</label>
-                                    <input type="text" class="form-control" id="lote" placeholder="0000" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="numeroEjemplar">Numero de Ejemplares</label>
-                                    <input type="text" class="form-control" id="numeroEjemplar" placeholder="0000"
-                                        required>
-                                </div>
-                                <button type="submit" class="btn btn-dark">Registrar</button>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal Registrar -->
-
-            <!-- Modal Modificar -->
-            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#modificarGanado">
-                Modificar Ganado
-            </button>
-            <div class="modal fade" id="modificarGanado" tabindex="-1" role="dialog" aria-labelledby="modificarGanado"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modificarGanadoTitle">Modificar Ganado</h5>
-                        </div>
-                        <div class="modal-body">
-                            <!-- formulario -->
-                            <form>
-                                <div class="form-group">
-                                    <label for="raza">Raza</label>
-                                    <input type="text" class="form-control" id="raza" placeholder="Raza" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lote">Lote</label>
-                                    <input type="text" class="form-control" id="lote" placeholder="0000" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="numeroEjemplar">Numero de Ejemplares</label>
-                                    <input type="text" class="form-control" id="numeroEjemplar" placeholder="0000"
-                                        required>
-                                </div>
-                                <button type="submit" class="btn btn-dark">Modificar</button>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal Modificar-->
-            <!-- Modal Eliminar -->
-            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#eliminarGanado">
-                Eliminar Ganado
-            </button>
-            <div class="modal fade" id="eliminarGanado" tabindex="-1" role="dialog" aria-labelledby="eliminarGanado"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="eliminarGanadoTitle">Eliminar Ganado</h5>
-                        </div>
-                        <div class="modal-body">
-                            <!-- formulario -->
-                            <form>
-                                <div class="form-group">
-                                    <label for="raza">Raza</label>
-                                    <input type="text" class="form-control" id="raza" placeholder="Raza" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lote">Lote</label>
-                                    <input type="text" class="form-control" id="lote" placeholder="0000" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="numeroEjemplar">Numero de Ejemplares</label>
-                                    <input type="text" class="form-control" id="numeroEjemplar" placeholder="0000"
-                                        required>
-                                </div>
-                                <button type="submit" class="btn btn-dark">Eliminar</button>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal ELiminar -->
-        </div>
-        <hr>
-        <img src="https://i.ibb.co/r2M8Yrm/Whats-App-Image-2021-10-18-at-00-57-40.jpg" alt="logo">
-    </div>
-
-    <div class="container-fluid ctn-inferior">
-
-        <!-- Select Tipo Cita -->
-        <div class="container ctn-agendamiento">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="selectTipoCita">Tipo de Cita</label>
-                </div>
-                <select class="custom-select" id="selectTipoCita">
-                    <option value="ninguna" selected>Seleccione Un Tipo de Cita</option>
-                    <option value="vacuna">Vacunación</option>
-                    <option value="consulta">Consulta medica</option>
-                </select>
-            </div>
-            <!-- Boton Modal Tipo Cita -->
-            <button type="button" class="btn btn-activarModal" id="btn-tipoConsulta" data-toggle="modal" data-target="">
-                Agendar Cita
-            </button>
-            <!-- Modal Vacunacion -->
-            <div class="modal fade" id="vacuna" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="vacunaTitle">Vacunación</h5>
-                        </div>
-                        <div class="modal-body">
-                            <!-- formulario  Vacunacion-->
-                            <form>
-                                <div class="form-group">
-                                    <label for="codigoGanado">Código ganado</label>
-                                    <input type="text" class="form-control" id="codigoGanado" placeholder="codigo"
-                                        required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="select-ubicacion-vacuna">Ubicacion</label>
-                                    <select class="custom-select" id="select-ubicacion-vacuna" required>
-                                        <option value="nulo">Departamento</option>
-                                        <option value="ant">Antioquía</option>
-                                        <option value="bog">Bogota</option>
-                                        <option value="valle">Valle del Cauca</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="select-municipio">Municipio</label>
-                                    <select class="custom-select" id="select-municipio-vacuna" required>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mensaje">Mensajes</label>
-                                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-dark">Solicitar</button>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- MOdal Consulta -->
-            <div class="modal fade" id="consulta" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="consultaMedicaTitle">Consulta medica</h5>
-                        </div>
-                        <div class="modal-body">
-                            <!-- formulario  Consulta-->
-                            <form>
-                                <div class="form-group">
-                                    <label for="codigoEjemplar">Código ejemplar</label>
-                                    <input type="text" class="form-control" id="codigoEjemplar" placeholder="Codigo"
-                                        required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="select-ubicacion">Ubicacion</label>
-                                    <select class="custom-select" id="select-ubicacion-citaM" required>
-                                        <option value="nulo">Departamento</option>
-                                        <option value="ant">Antioquía</option>
-                                        <option value="bog">Bogota</option>
-                                        <option value="valle">Valle del Cauca</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="select-municipio">Municipio</label>
-                                    <select class="custom-select" id="select-municipio-citaM" required>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mensaje">Mensaje</label>
-                                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-dark">Solicitar</button>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Boton Modal Tipo Cita -->
-        </div>
-
-        <hr>
-
-        <!-- Tabla de Estado -->
-        <div class="container ctn-TablaSolictud">
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">Tipo Solicitud</th>
-                        <th scope="col">Usuario</th>
-                        <th scope="col">Ejemplar</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Accion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Vacunacion</th>
-                        <td>Lina Mejia</td>
-                        <td>786VILL</td>
-                        <td><img src="icons/delete.ico" class="estado-icono" alt="delete"></td>
-                        <td><button type="#" class="btn-eliminarSolicitud">Detalles</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cita Medica</th>
-                        <td>Alberto Perez</td>
-                        <td>766VADG</td>
-                        <td><img src="icons/check.ico" alt="check" class="estado-icono"></td>
-                        <td><button type="#" class="btn-eliminarSolicitud">Detalles</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cita Medica</th>
-                        <td>Alberto Perez</td>
-                        <td>766VADG</td>
-                        <td><img src="icons/check.ico" alt="check" class="estado-icono"></td>
-                        <td><button type="#" class="btn-eliminarSolicitud">Detalles</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cita Medica</th>
-                        <td>Alberto Perez</td>
-                        <td>766VADG</td>
-                        <td><img src="icons/check.ico" alt="check" class="estado-icono"></td>
-                        <td><button type="#" class="btn-eliminarSolicitud">Detalles</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Seccion Logeado -->
-    <script src="js/tipoSolicitud.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+</script>
 </body>
-
 </html>

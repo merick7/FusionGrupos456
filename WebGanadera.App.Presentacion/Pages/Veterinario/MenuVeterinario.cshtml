@@ -2,3 +2,611 @@
 @model WebGanadera.App.Presentacion.Pages.MenuVeterinarioModel
 @{
 }
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Bienvenido</title>
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="css/LoginVeterinario.css">
+
+    <style>
+        /* Container superior */
+.ctn-superior{
+    background-color:whitesmoke;
+    width: 80%;
+    height: 50vh;
+    margin-top: 2%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 5px;
+}
+.ctn-superior hr{
+    background-color: #b4b3ac;
+    height:40vh;
+    width: 0.2px;
+    border-radius: 80px;
+}
+.ctn-superior img{
+    width: 50%;
+    height:40vh;
+    border-radius: 2px;
+}
+.btn-filtroTabla,
+.btn-activarModal{
+    background-color:#33363a;
+    color: #e8e8e8d7;
+    width: 80%;
+    margin:5% 10%;
+    border-radius: 80px;
+}
+.btn-filtroTabla:hover,
+.btn-activarModal:hover{
+    background-color:#e8e8e8d7;
+    color: #33363a;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px #33363a;
+}
+.ctn-superior .ctn-modals{
+    width: 30%;
+    height:40vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content{
+    background-color:#e8e8e8;
+    border-radius: 18px;
+}
+.modal-content .modal-header{
+    justify-content: center;
+}
+
+.modal .modal-footer button{
+    background-color:#e8e8e8d7;
+    color: black;
+}
+form .form-group{
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-group label {
+    width: 20%;
+}
+
+.form-group-vacuna option {
+    width: 100%;
+}
+
+.form-group input{
+    width: 60%;
+}
+
+.form-group textarea{
+    resize: none;
+}
+
+form .btn-dark{
+    background-color:#e8e8e8d7;
+    color: black;
+    margin-left: 40%;
+}
+
+/* Container inferior */
+
+.ctn-inferior{
+    background-color:whitesmoke;
+    width: 80%;
+    height: 40vh;
+    margin-top:2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom:2% ;
+}
+
+.ctn-inferior .ctn-agendamiento{
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.ctn-inferior hr{
+    background-color: #b4b3ac;
+    height:30vh;
+    width: 0.3px;
+    border-radius: 80px;
+}
+
+.ctn-inferior .ctn-TablaSolictud{
+    width: 60%;
+    height: 30vh;
+    align-items: center;
+    overflow-y:scroll;
+}
+.ctn-inferior .ctn-TablaSolictud::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;  
+}
+.ctn-inferior .ctn-TablaSolictud::-webkit-scrollbar-thumb {
+    background:#33363a;
+    border-radius: 4px;
+}
+
+.ctn-TablaSolictud .table tbody ,
+    .ctn-TablaSolictud .table thead th{
+    text-align: center;
+}
+
+.ctn-TablaSolictud .table tbody .estado-icono{
+    width: 20%;
+    align-self: center;
+}
+
+.ctn-TablaSolictud .table .btn-Solicitud{
+    background-color: #e8e8e8;
+    border-radius: 80px;
+    border:none;
+}
+.ctn-TablaSolictud .table .btn-Solicitud:hover{
+    background-color: #e8e8e8;
+    color: #33363a;
+    transform: scale(1.1);
+}
+
+
+#footer-wrapper{
+    color:white; /* Color del título */
+    margin: 5px 10px;
+    padding: 1px 0;
+    text-align: center;
+    font-size: 12px; /* Tamaño de la fuente del título */
+    }
+    .u-footer{
+      background: #3c3c3c; /* Color de fondo de los gadgets */
+      padding: 5px 5px;
+    }
+  
+    #col1{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #col2{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    #col3{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    #col4{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20xp;
+      text-align: center;
+    }
+    #col5{
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 0;
+      padding: 20xp;
+      text-align: center;
+    }
+  
+    .u-footer .u-text-6 {
+      font-style: "font-family:optima";
+      font-size: 11px;
+      margin: 1px auto 0;
+      text-align: center;
+    }
+    
+    .u-footer .u-text-7 {
+      font-style: "font-family:optima";
+      font-size: 10px;
+      margin: 1px auto 16px;
+      text-align: center;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 class="text-center my-3">Bienvenido Veterinario ..nombre</h1>
+
+    <!-- Seccion Logeado -->
+    <div class="container-fluid ctn-superior">
+        <div class="container ctn-modals">
+            <!-- Modal Registrar -->
+            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#registrarVacuna">
+                Registrar Vacuna
+            </button>
+            <div class="modal fade" id="registrarVacuna" tabindex="-1" role="dialog" aria-labelledby="registrarVacuna"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registrarVacunaTitle">Registrar Vacuna</h5>
+                        </div>
+                        <div class="modal-body">
+                            <!-- formulario -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descripcion">Descripción</label>
+                                    <input type="text" class="form-control" id="descripcion" placeholder="  " required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lote">Lote</label>
+                                    <input type="text" class="form-control" id="lote" placeholder="0000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fechaVencimiento">Fecha de Vencimiento</label>
+                                    <input type="date" class="form-control" id="fechaVencimiento"
+                                        placeholder="DD/MM/AAAA" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registroSanitario">Registro Sanitario</label>
+                                    <input type="text" class="form-control" id="registroSanitario" placeholder="   " required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="laboratorio">Laboratorio</label>
+                                    <input type="text" class="form-control" id="laboratorio" placeholder="   " required>
+                                </div>
+                                <button type="submit" class="btn btn-dark">Registrar</button>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Registrar -->
+
+            <!-- Modal Modificar -->
+            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#modificarVacuna">
+                Modificar Vacuna
+            </button>
+            <div class="modal fade" id="modificarVacuna" tabindex="-1" role="dialog" aria-labelledby="modificarVacuna"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modificarVacunaTitle">Modificar Vacuna</h5>
+                        </div>
+                        <div class="modal-body">
+                            <!-- formulario -->
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label  for="select-vacuna-modificar">Seleccionar vacuna</label>
+                                    <select class="custom-select" id="select-vacuna-modificar" required>
+                                      <option value="nulo">Seleccione vacuna a modificar</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descripcion">Descripción</label>
+                                    <input type="text" class="form-control" id="descripcion" placeholder="  " required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lote">Lote</label>
+                                    <input type="text" class="form-control" id="lote" placeholder="0000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fechaVencimiento">Fecha de Vencimiento</label>
+                                    <input type="date" class="form-control" id="fechaVencimiento"
+                                        placeholder="DD/MM/AAAA" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registroSanitario">Registro Sanitario</label>
+                                    <input type="text" class="form-control" id="registroSanitario" placeholder="   " required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="laboratorio">Laboratorio</label>
+                                    <input type="text" class="form-control" id="laboratorio" placeholder="   " required>
+                                </div>
+                                <button type="submit" class="btn btn-dark">Modificar</button>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Modificar-->
+
+            <!-- Modal Eliminar -->
+            <button type="button" class="btn btn-activarModal" data-toggle="modal" data-target="#eliminarVacuna">
+                Eliminar Vacuna
+            </button>
+            <div class="modal fade" id="eliminarVacuna" tabindex="-1" role="dialog" aria-labelledby="eliminarVacuna"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eliminarVacunaTitle">Eliminar Vacuna</h5>
+                        </div>
+                        <div class="modal-body">
+                            <!-- formulario -->
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label  for="select-ganado-modificar">Seleccionar ganado</label>
+                                    <select class="custom-select" id="select-ganado-modificar" required>
+                                      <option value="nulo">Seleccione ganado a modificar</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-dark">Eliminar</button>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal ELiminar -->
+        </div>
+        <hr>
+        <img src="https://i.ibb.co/CvNpwyL/Whats-App-Image-2021-10-18-at-00-57-41-2.jpg" alt="logo">
+    </div>
+
+    <div class="container-fluid ctn-inferior">
+        <!-- Select Tipo Cita -->
+        <div class="container ctn-agendamiento">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="selectSolicitud">Solicitudes</label>
+                </div>
+                <select class="custom-select" id="selectSolicitud">
+                    <option value="ninguna" selected>Seleccione Tipo de Solicitud </option>
+                    <option value="vacuna">Vacunación</option>
+                    <option value="tipoCita">Cita Médica</option>
+                    <option value="pendiente">Estado pendiente</option>
+                    <option value="enProceso">Estado en proceso</option>
+                    <option value="finalizado">Estado finalizado</option>
+                </select>
+            </div>
+            <!-- Boton Filtro-->
+            <button type="button" class="btn btn-filtroTabla">
+                Mostrar
+            </button>
+        </div>
+
+        <hr>
+
+        <!-- Tabla de Estado -->
+        <div class="container ctn-TablaSolictud">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Tipo de atención</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cita Medica</td>
+                        <td>Andrea Erick</td>
+                        <td><img src="https://i.ibb.co/LrY8RyK/Whats-App-Image-2021-10-18-at-9-04-38-AM.jpg" class="estado-icono" alt="pendiente"></td>
+                        <td><button type="button" class="btn-Solicitud" data-toggle="modal" data-target="#SolicitudPendiente">
+                            Detalles
+                          </button></td>
+                    </tr>
+                    <tr>
+                        <td>Vacunación</th>
+                        <td>Stiven Alejandro</td>
+                        <td><img src="https://i.ibb.co/m6m1912/Whats-App-Image-2021-10-18-at-9-04-38-AM-2.jpg" class="estado-icono" alt="proceso"></td>        
+                        <td><button type="button" class="btn-Solicitud" data-toggle="modal" data-target="#SolicitudProceso">
+                            Detalles
+                          </button></td>
+                      </tr>
+                      <tr>
+                        <td>Atención Médica</th>
+                        <td>Javier Lina</td>
+                        <td><img src="https://i.ibb.co/my34fvj/Whats-App-Image-2021-10-18-at-9-04-38-AM-1.jpg" class="estado-icono" alt="finalizado"></td>        
+                        <td><button type="button" class="btn-Solicitud" data-toggle="modal" data-target="#SolicitudFinalizado">
+                            Detalles
+                          </button></td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Pendiente-->
+<div class="modal fade" id="SolicitudPendiente" tabindex="-1" role="dialog" aria-labelledby="SolicitudPendienteTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SolicitudPendienteTitle">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Asignar cita: <input type="date" name="calendario" step="1" min="2021-01-01" max="2050-12-31" value="2021-10-18">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Iniciar proceso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Pendiente-->
+
+  <!-- Modal Proceso-->
+ <div class="modal fade" id="SolicitudProceso" tabindex="-1" role="dialog" aria-labelledby="SolicitudProceso" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SolicitudProceso">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Mostrar información de cita asignada: *conectar con cita asignada
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <td><button type="button" class="btn Asignar" data-toggle="modal" data-target="#Asignar">
+            Asignar Proceso
+          </button></td>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Proceso-->
+
+  <!-- Modal Asignar Proceso-->
+ <div class="modal fade" id="Asignar" tabindex="-1" role="dialog" aria-labelledby="Asignar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Asignar">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Llamar toda la información de consulta-<br>
+            Llenar historia clínica<br><br>
+            Seleccionar vacuna aplicada si es el caso:<br><br>
+            <form>
+                <div class="form-group-vacuna mb-3">
+                    <select class="custom-select" id="select-vacuna-aplicada" required>
+                      <option value="nulo">Seleccione vacuna aplicada</option>
+                    </select>
+                </div>
+            </form>
+            Seguir en pendiente si aún no ha concluido el proceso
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar proceso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Asignar Proceso-->
+
+<!-- Modal Finalizado-->
+<div class="modal fade" id="SolicitudFinalizado" tabindex="-1" role="dialog" aria-labelledby="SolicitudFinalizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SolicitudFinalizado">Información General</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          #Conectar información de registro del ganadero-ejemplar, tipo de Solicitud, raza, edad, ubicación, etc..
+        </div>
+        <div class="modal-body">
+            Llamar toda la información de consulta-<br>
+            Mostrar historia clínica<br>
+            Proceso concluido<br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Finalizado-->
+
+
+    <!-- Seccion Logeado -->
+    <script src="/js/LoginVeterinario.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        
+const d = document;
+function tipoCita (){
+    const $select = d.getElementById("selectTipoCita")
+    const $btnModal = d.getElementById("btn-tipoConsulta")
+
+    
+    d.addEventListener("change", e =>{
+        console.log($btnModal)
+
+        if($select.value === "vacuna") $btnModal.dataset.target = "#vacuna"
+
+        if($select.value === "consulta")$btnModal.dataset.target = "#consulta"
+
+        if($select.value === "ninguna"){
+            $btnModal.dataset.target = "#"
+            //alert("Por favor Seleccione una opcion Valida")
+        }
+        
+            
+    })
+
+}
+tipoCita()
+    </script>
+</body>
+
+</html>
